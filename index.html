@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #333;
+        color: #ddd;
+      }
+      form {
+        margin: 0 auto;
+        width: 300px;
+        background-color: #444;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #666;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #555;
+        color: #ddd;
+        border: 1px solid #666;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #f60;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #f90;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="login(event)">
+      <h1>Admin Login</h1>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+      <input type="submit" value="Login">
+      <div id="message"></div>
+    </form>
+    <script>
+      function login(event) {
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "joven" && password === "joven") {
+          // Successful login
+          document.getElementById("message").innerHTML = "fck Hacking :3 ";
+        } else {
+          // Failed login
+          document.getElementById("message").innerHTML = "Incorrect username or password";
+        }
+      }
+    </script>
+  </body>
+</html>
